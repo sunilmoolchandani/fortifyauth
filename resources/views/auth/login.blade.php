@@ -45,11 +45,17 @@ border-bottom-right-radius: .3rem;
                     <input type="email" id="form2Example11" class="form-control"
                       placeholder="Phone number or email address" name="email"/>
                     <label class="form-label" for="form2Example11">Username</label>
+                    @error('email')
+                    <span>{{$message}}</span>
+                    @enderror()
                   </div>
 
                   <div data-mdb-input-init class="form-outline mb-4">
                     <input type="password" name="password" id="form2Example22" class="form-control" />
                     <label class="form-label" for="form2Example22">Password</label>
+                    @error('password')
+                    <span>{{$message}}</span>
+                    @enderror()
                   </div>
 
                   <div class="text-center pt-1 mb-5 pb-1">
@@ -67,14 +73,7 @@ border-bottom-right-radius: .3rem;
 
               </div>
             </div>
-            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
-              <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                <h4 class="mb-4">We are more than just a company</h4>
-                <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
